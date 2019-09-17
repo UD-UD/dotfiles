@@ -7,12 +7,17 @@
 # Ag is a code-searching tool similar to Ack but faster.
 # Reattach-to-user-namespace is a MacOS Sierra fix to ensure the workflow has access to the clipboard so share copy and paste functionality as one would expect in the correct namespace.
 
-brew install zsh tmux neovim python3 ag reattach-to-user-namespace
+brew install zsh tmux neovim python3 node ag reattach-to-user-namespace
 brew tap caskroom/cask
 
 # vim-plug is installed as a package manager
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 pip3 install neovim
+
+# using Pure Prompt
+mkdir -p "$HOME/.zsh"
+git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+fpath+=("$HOME/.zsh/pure")
 
 # Fonts
 # brew tap caskroom/fonts
@@ -33,3 +38,5 @@ mkdir -p ~/.config ~/.config/nvim
 ln -s ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/vimrc ~/.config/nvim/init.vim
+
+
