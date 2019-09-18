@@ -27,7 +27,7 @@ update_shell() {
 
 # ***************************
 
-brew install zsh tmux neovim python3 node ag reattach-to-user-namespace && true
+brew install zsh tmux neovim python3 node ag reattach-to-user-namespace
 brew tap caskroom/cask
 
 # vim-plug is installed as a package manager
@@ -51,8 +51,6 @@ then
     mkdir -p "$HOME/.zsh"
     git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 fi
-
-
 
 # Fonts
 # brew tap caskroom/fonts
@@ -79,6 +77,7 @@ ln -s ~/dotfiles/configs/zshrc ~/.zshrc
 ln -s ~/dotfiles/configs/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/configs/vimrc ~/.config/nvim/init.vim
 
-echo "Dot files installed successfully.\nPlease restart your terminal"
+echo "Dot files installed successfully."
+echo "Please restart your terminal"
 
 
