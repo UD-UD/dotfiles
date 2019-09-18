@@ -3,17 +3,6 @@
 
 # Path to your oh-my-zsh installation.
 
-# Change prompt to pure
-autoload -U promptinit; promptinit
-
-# Change pure directory the path color
-zstyle :prompt:pure:path color yellow
-
-# change pure prompt color
-zstyle ':prompt:pure:prompt:*' color cyan
-
-prompt pure
-
 export ZSH="/Users/$USER/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -86,6 +75,17 @@ plugins=(
     )
 
 source $ZSH/oh-my-zsh.sh
+
+# Change prompt to pure
+autoload -U promptinit; promptinit
+
+# Change pure directory the path color
+zstyle :prompt:pure:path color yellow
+
+# change pure prompt color
+zstyle ':prompt:pure:prompt:*' color cyan
+
+prompt pure
 
 # User configuration
 
