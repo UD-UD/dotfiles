@@ -27,7 +27,7 @@ update_shell() {
 
 # ***************************
 
-brew install zsh tmux neovim python3 node ag reattach-to-user-namespace || true
+brew install zsh tmux neovim python3 node ag reattach-to-user-namespace && true
 brew tap caskroom/cask
 
 # vim-plug is installed as a package manager
