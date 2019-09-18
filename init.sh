@@ -55,7 +55,8 @@ case "$SHELL" in
     ;;
 esac
 
-# TODO: Move to .dotfiles_bkp
+# Move to .dotfiles_bkp
+mv ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config/nvim ~/.dotfiles_bkp
 # remove existing dotfiles
 rm -rf ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config/nvim 2> /dev/null
 
@@ -64,8 +65,8 @@ rm -rf ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config/nvim 2> /dev/null
 mkdir -p ~/.config ~/.config/nvim
 
 # Symlinks can allow the file system point from where configs are expected to be to this repo.
-ln -s ~/dotfiles/config/zshrc ~/.zshrc
-ln -s ~/dotfiles/config/tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/config/vimrc ~/.config/nvim/init.vim
+ln -s ~/dotfiles/configs/zshrc ~/.zshrc
+ln -s ~/dotfiles/configs/tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/configs/vimrc ~/.config/nvim/init.vim
 
 
