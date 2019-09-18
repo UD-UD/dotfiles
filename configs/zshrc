@@ -14,7 +14,7 @@ zstyle ':prompt:pure:prompt:*' color cyan
 
 prompt pure
 
-export ZSH="/Users/ud/.oh-my-zsh"
+export ZSH="/Users/$USER/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

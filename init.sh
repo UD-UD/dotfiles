@@ -39,6 +39,9 @@ mkdir -p "$HOME/.zsh"
 git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 fpath+=("$HOME/.zsh/pure")
 
+# Install oh my zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # Fonts
 # brew tap caskroom/fonts
 # brew cask install font-fira-code
@@ -55,9 +58,9 @@ case "$SHELL" in
     ;;
 esac
 
-# Move to .dotfiles_bkp
-mkdir -p ~/.dotfiles_bkp
-mv -t ~/.dotfiles_bkp ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf 
+# TODO Move to .dotfiles_bkp
+# mkdir -p ~/.dotfiles_bkp
+# mv -t ~/.dotfiles_bkp ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf 
 # remove existing dotfiles
 rm -rf ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config/nvim 2> /dev/null
 
