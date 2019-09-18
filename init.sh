@@ -34,6 +34,13 @@ brew tap caskroom/cask
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 pip3 install neovim
 
+# TODO Move to .dotfiles_bkp
+mkdir -p ~/.dotfiles_bkp
+mv -f ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf  ~/.dotfiles_bkp
+
+# remove existing dotfiles
+rm -rf ~/.zsh ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config/nvim 2> /dev/null
+
 
 # Install oh my zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -62,13 +69,6 @@ case "$SHELL" in
     update_shell
     ;;
 esac
-
-# TODO Move to .dotfiles_bkp
-mkdir -p ~/.dotfiles_bkp
-mv ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf -t ~/.dotfiles_bkp
-
-# remove existing dotfiles
-rm -rf ~/.zsh ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config/nvim 2> /dev/null
 
 # Make necessary files
 
