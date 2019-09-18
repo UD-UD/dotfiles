@@ -24,7 +24,13 @@ fpath+=("$HOME/.zsh/pure")
 # brew cask install font-fira-code
 
 # Setting ZSH as Default Shell
-chsh -s /usr/local/bin/zsh
+if ! command_exists zsh; then
+    echo "zsh not found. Please install and then re-run installation scripts"
+    exit 1
+elif ! [[ $SHELL =~ .*zsh.* ]]; then
+    echo "Configuring zsh as default shell"
+    chsh -s "$(command -v zsh)"
+fi
 
 # TODO: Move to .dotfiles_bkp
 # remove existing dotfiles
