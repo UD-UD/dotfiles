@@ -73,4 +73,6 @@ ln -s ~/dotfiles/configs/zshrc ~/.zshrc
 ln -s ~/dotfiles/configs/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/configs/vimrc ~/.config/nvim/init.vim
 
+echo "Please restart your terminal"
+
 
