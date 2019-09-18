@@ -38,9 +38,14 @@ pip3 install neovim
 # Install oh my zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# using Pure Prompt
-mkdir -p "$HOME/.zsh"
-git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+# Install Pure Prompt
+if [ ! -d $HOME/.zsh/pure ] 
+then
+    mkdir -p "$HOME/.zsh"
+    git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+fi
+
+
 
 # Fonts
 # brew tap caskroom/fonts
@@ -59,10 +64,11 @@ case "$SHELL" in
 esac
 
 # TODO Move to .dotfiles_bkp
-# mkdir -p ~/.dotfiles_bkp
-# mv -t ~/.dotfiles_bkp ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf 
+mkdir -p ~/.dotfiles_bkp
+mv ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf -t ~/.dotfiles_bkp
+
 # remove existing dotfiles
-rm -rf ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config/nvim 2> /dev/null
+rm -rf ~/.zsh ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config/nvim 2> /dev/null
 
 # Make necessary files
 
@@ -73,6 +79,6 @@ ln -s ~/dotfiles/configs/zshrc ~/.zshrc
 ln -s ~/dotfiles/configs/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/configs/vimrc ~/.config/nvim/init.vim
 
-echo "Please restart your terminal"
+echo "Dot files installed successfully.\nPlease restart your terminal"
 
 
