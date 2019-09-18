@@ -13,6 +13,18 @@ command_exists() {
     type "$1" > /dev/null 2>&1
 }
 
+update_shell() {
+  local shell_path;
+  shell_path="$(command -v zsh)"
+
+  echo "Changing your shell to zsh ..."
+  if ! grep "$shell_path" /etc/shells > /dev/null 2>&1 ; then
+    fancy_echo "Adding '$shell_path' to /etc/shells"
+    sudo sh -c "echo $shell_path >> /etc/shells"
+  fi
+  sudo chsh -s "$shell_path" "$USER"
+}
+
 # ***************************
 
 brew install zsh tmux neovim python3 node ag reattach-to-user-namespace
@@ -32,13 +44,16 @@ fpath+=("$HOME/.zsh/pure")
 # brew cask install font-fira-code
 
 # Setting ZSH as Default Shell
-if ! command_exists zsh; then
-    echo "zsh not found. Please install and then re-run installation scripts"
-    exit 1
-elif ! [[ $SHELL =~ .*zsh.* ]]; then
-    echo "Configuring zsh as default shell"
-    chsh -s "$(command -v zsh)"
-fi
+case "$SHELL" in
+  */zsh)
+    if [ "$(command -v zsh)" != '/usr/local/bin/zsh' ] ; then
+      update_shell
+    fi
+    ;;
+  *)
+    update_shell
+    ;;
+esac
 
 # TODO: Move to .dotfiles_bkp
 # remove existing dotfiles
