@@ -7,6 +7,14 @@
 # Ag is a code-searching tool similar to Ack but faster.
 # Reattach-to-user-namespace is a MacOS Sierra fix to ensure the workflow has access to the clipboard so share copy and paste functionality as one would expect in the correct namespace.
 
+# ******** UTILITY **********
+
+command_exists() {
+    type "$1" > /dev/null 2>&1
+}
+
+# ***************************
+
 brew install zsh tmux neovim python3 node ag reattach-to-user-namespace
 brew tap caskroom/cask
 
