@@ -19,7 +19,7 @@ update_shell() {
 
   echo "Changing your shell to zsh ..."
   if ! grep "$shell_path" /etc/shells > /dev/null 2>&1 ; then
-    fancy_echo "Adding '$shell_path' to /etc/shells"
+    echo "Adding '$shell_path' to /etc/shells"
     sudo sh -c "echo $shell_path >> /etc/shells"
   fi
   sudo chsh -s "$shell_path" "$USER"
@@ -64,8 +64,8 @@ rm -rf ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config/nvim 2> /dev/null
 mkdir -p ~/.config ~/.config/nvim
 
 # Symlinks can allow the file system point from where configs are expected to be to this repo.
-ln -s ~/dotfiles/zshrc ~/.zshrc
-ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/vimrc ~/.config/nvim/init.vim
+ln -s ~/dotfiles/config/zshrc ~/.zshrc
+ln -s ~/dotfiles/config/tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/config/vimrc ~/.config/nvim/init.vim
 
 
