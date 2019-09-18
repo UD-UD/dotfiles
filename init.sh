@@ -52,6 +52,13 @@ then
     git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 fi
 
+
+# Install Syntax HighLighter
+if [ ! -d $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ] 
+then
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+fi
+
 # Fonts
 # brew tap caskroom/fonts
 # brew cask install font-fira-code
