@@ -56,7 +56,8 @@ case "$SHELL" in
 esac
 
 # Move to .dotfiles_bkp
-mv -t ~/.dotfiles_bkp ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config/nvim/* 
+mkdir -p ~/.dotfiles_bkp
+mv -t ~/.dotfiles_bkp ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf 
 # remove existing dotfiles
 rm -rf ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config/nvim 2> /dev/null
 
