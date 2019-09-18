@@ -83,6 +83,7 @@ mkdir -p ~/.config ~/.config/nvim
 ln -s ~/dotfiles/configs/zshrc ~/.zshrc
 ln -s ~/dotfiles/configs/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/configs/vimrc ~/.config/nvim/init.vim
+ln -s $HOME/.zsh/pure/prompt_pure_setup /usr/local/share/zsh/site-functions/prompt_pure_setup
 
 echo "Dot files installed successfully."
 echo "Please restart your terminal"
