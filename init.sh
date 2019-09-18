@@ -34,17 +34,6 @@ brew tap caskroom/cask
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 pip3 install neovim
 
-# using Pure Prompt
-git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
-fpath+=("$HOME/.zsh/pure")
-
-# Install oh my zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# Fonts
-# brew tap caskroom/fonts
-# brew cask install font-fira-code
-
 # Setting ZSH as Default Shell
 case "$SHELL" in
   */zsh)
@@ -56,6 +45,20 @@ case "$SHELL" in
     update_shell
     ;;
 esac
+
+# using Pure Prompt
+git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+fpath+=("$HOME/.zsh/pure")
+
+# Install oh my zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Install zsh plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# Fonts
+# brew tap caskroom/fonts
+# brew cask install font-fira-code
 
 # TODO Move to .dotfiles_bkp
 # mkdir -p ~/.dotfiles_bkp
