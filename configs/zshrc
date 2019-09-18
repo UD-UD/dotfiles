@@ -72,7 +72,7 @@ export ZSH="/Users/$USER/.oh-my-zsh"
 plugins=(
     git
     zsh-autosuggestions
-    zsh-syntax-highlighting
+    colorize
     )
 
 source $ZSH/oh-my-zsh.sh
