@@ -35,7 +35,6 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 pip3 install neovim
 
 # using Pure Prompt
-mkdir -p "$HOME/.zsh"
 git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 fpath+=("$HOME/.zsh/pure")
 
