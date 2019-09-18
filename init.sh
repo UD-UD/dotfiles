@@ -46,15 +46,15 @@ case "$SHELL" in
     ;;
 esac
 
-# using Pure Prompt
-git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
-fpath+=("$HOME/.zsh/pure")
-
 # Install oh my zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install zsh plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# using Pure Prompt
+git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+fpath+=("$HOME/.zsh/pure")
 
 # Fonts
 # brew tap caskroom/fonts
