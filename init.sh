@@ -31,8 +31,8 @@ brew install zsh tmux neovim python3 node ag reattach-to-user-namespace
 brew tap caskroom/cask
 
 # vim-plug is installed as a package manager
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-pip3 install neovim
+# curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# pip3 install neovim
 pip3 install pynvim
 
 # TODO Move to .dotfiles_bkp
@@ -80,11 +80,23 @@ esac
 
 mkdir -p ~/.config ~/.config/nvim
 
+# copy necessary files
+config_files=$( find "~/dotfiles/configs" -d 1 2>/dev/null )
+for config in $config_files; do
+    target="$HOME/.config/$( basename "$config" )"
+    if [ -e "$target" ]; then
+        echo "~${target#$HOME} already exists... Skipping."
+    else
+        echo "Creating symlink for $config"
+        ln -s "$config" "$target"
+    fi
+done
+
 # Symlinks can allow the file system point from where configs are expected to be to this repo.
 ln -s ~/dotfiles/configs/zshrc ~/.zshrc
 ln -s ~/dotfiles/configs/tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/configs/nvim/init.vim ~/.config/nvim/init.vim
-ln -s ~/dotfiles/configs/nvim ~/.config/nvim
+# ln -s ~/dotfiles/configs/nvim/init.vim ~/.config/nvim/init.vim
+# ln -s ~/dotfiles/configs/nvim ~/.config/nvim
 ln -sf $HOME/.zsh/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
 
 echo "Dot files installed successfully."
