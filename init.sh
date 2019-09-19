@@ -63,7 +63,7 @@ fi
 
 # Fonts
 brew tap caskroom/fonts
-brew cask install lekton-nerd-font
+brew cask install font-lekton-nerd-font
 
 # Setting ZSH as Default Shell
 case "$SHELL" in
