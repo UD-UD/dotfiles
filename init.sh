@@ -35,7 +35,7 @@ brew tap caskroom/cask
 # pip3 install neovim
 pip3 install pynvim
 
-# TODO Move to .dotfiles_bkp
+# # TODO Move to .dotfiles_bkp
 # mkdir -p ~/.dotfiles_bkp
 # mv -f ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~./config  ~/.dotfiles_bkp
 
