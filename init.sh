@@ -37,7 +37,7 @@ pip3 install pynvim
 
 # TODO Move to .dotfiles_bkp
 mkdir -p ~/.dotfiles_bkp
-mv -f ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf  ~/.dotfiles_bkp
+mv -f ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~./config  ~/.dotfiles_bkp
 
 # remove existing dotfiles
 rm -rf ~/.zsh ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config/nvim 2> /dev/null
@@ -95,8 +95,8 @@ done
 # Symlinks can allow the file system point from where configs are expected to be to this repo.
 ln -s ~/dotfiles/configs/zshrc ~/.zshrc
 ln -s ~/dotfiles/configs/tmux.conf ~/.tmux.conf
-# ln -s ~/dotfiles/configs/nvim/init.vim ~/.config/nvim/init.vim
-# ln -s ~/dotfiles/configs/nvim ~/.config/nvim
+ln -s ~/dotfiles/configs/nvim/init.vim ~/.config/nvim/init.vim
+ln -s ~/dotfiles/configs/nvim ~/.config/nvim
 ln -sf $HOME/.zsh/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
 
 echo "Dot files installed successfully."
