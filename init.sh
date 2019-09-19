@@ -36,11 +36,11 @@ brew tap caskroom/cask
 pip3 install pynvim
 
 # TODO Move to .dotfiles_bkp
-mkdir -p ~/.dotfiles_bkp
-mv -f ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~./config  ~/.dotfiles_bkp
+# mkdir -p ~/.dotfiles_bkp
+# mv -f ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~./config  ~/.dotfiles_bkp
 
 # remove existing dotfiles
-rm -rf ~/.zsh ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config/nvim 2> /dev/null
+rm -rf ~/.zsh ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config 2> /dev/null
 
 
 # Install oh my zsh
