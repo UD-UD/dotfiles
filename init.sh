@@ -83,7 +83,7 @@ mkdir -p ~/.config ~/.config/nvim
 ln -s ~/dotfiles/configs/zshrc ~/.zshrc
 ln -s ~/dotfiles/configs/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/configs/nvim/init.vim ~/.config/nvim/init.vim
-ln -s ~/dotfiles/configs/nvim ~/.vim
+ln -s ~/dotfiles/configs/nvim ~/.config/nvim
 ln -sf $HOME/.zsh/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
 
 echo "Dot files installed successfully."
