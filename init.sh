@@ -82,7 +82,8 @@ mkdir -p ~/.config ~/.config/nvim
 # Symlinks can allow the file system point from where configs are expected to be to this repo.
 ln -s ~/dotfiles/configs/zshrc ~/.zshrc
 ln -s ~/dotfiles/configs/tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/configs/vimrc ~/.config/nvim/init.vim
+ln -s ~/dotfiles/configs/nvim/init.vim ~/.config/nvim/init.vim
+ln -s ~/dotfiles/configs/nvim ~/.vim
 ln -sf $HOME/.zsh/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
 
 echo "Dot files installed successfully."
