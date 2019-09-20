@@ -521,7 +521,8 @@ call plug#begin('~/.config/nvim/plugged')
         \ 'coc-vimlsp',
         \ 'coc-emmet',
         \ 'coc-prettier',
-        \ 'coc-ultisnips'
+        \ 'coc-ultisnips',
+        \ 'coc-java'
         \ ]
 
         autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -654,9 +655,9 @@ call plug#end()
         let base16colorspace=256
         source ~/.vimrc_background
     else
-        let g:onedark_termcolors=16
-        let g:onedark_terminal_italics=1
-        colorscheme onedark
+        let g:nord_cursor_line_number_background = 1
+        let g:nord_italic_comments = 1
+        colorscheme nord
     endif
     syntax on
     filetype plugin indent on
