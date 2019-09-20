@@ -390,7 +390,7 @@ call plug#begin('~/.config/nvim/plugged')
     " NERDTree {{{
         Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
         Plug 'Xuyuanp/nerdtree-git-plugin'
-        Plug 'ryanoasis/vim-devicons'
+        
         Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
         let g:WebDevIconsOS = 'Darwin'
         let g:WebDevIconsUnicodeDecorateFolderNodes = 1
@@ -442,6 +442,7 @@ call plug#begin('~/.config/nvim/plugged')
          endfunction
 
         autocmd VimEnter * call StartUp()
+        Plug 'ryanoasis/vim-devicons'
 
     " }}}
 
@@ -534,7 +535,7 @@ call plug#begin('~/.config/nvim/plugged')
         \ 'coc-java'
         \ ]
 
-        autocmd CursorHold * silent call CocActionAsync('highlight')
+        " autocmd CursorHold * silent call CocActionAsync('highlight')
 
         " coc-prettier
         command! -nargs=0 Prettier :CocCommand prettier.formatFile
