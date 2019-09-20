@@ -662,15 +662,15 @@ call plug#end()
     syntax on
     filetype plugin indent on
     " make the highlighting of tabs and other non-text less annoying
-    highlight SpecialKey ctermfg=19 guifg=#333333
-    highlight NonText ctermfg=19 guifg=#333333
+    " highlight SpecialKey ctermfg=19 guifg=#333333
+    " highlight NonText ctermfg=19 guifg=#333333
 
     " make comments and HTML attributes italic
-    highlight Comment cterm=italic term=italic gui=italic
-    highlight htmlArg cterm=italic term=italic gui=italic
-    highlight xmlAttrib cterm=italic term=italic gui=italic
+    " highlight Comment cterm=italic term=italic gui=italic
+    " highlight htmlArg cterm=italic term=italic gui=italic
+    " highlight xmlAttrib cterm=italic term=italic gui=italic
     " highlight Type cterm=italic term=italic gui=italic
-    highlight Normal ctermbg=none
+    " highlight Normal ctermbg=none
 " }}}
 
 " vim:set foldmethod=marker foldlevel=0
