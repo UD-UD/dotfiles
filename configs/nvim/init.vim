@@ -434,6 +434,15 @@ call plug#begin('~/.config/nvim/plugged')
         \ 'Ignored'   : '☒',
         \ "Unknown"   : "?"
         \ }
+
+         function! StartUp()
+            if 0 == argc()
+                NERDTreeToggle
+            end
+         endfunction
+
+        autocmd VimEnter * call StartUp()
+
     " }}}
 
     " FZF {{{
@@ -655,8 +664,10 @@ call plug#end()
         let base16colorspace=256
         source ~/.vimrc_background
     else
-        let g:nord_cursor_line_number_background = 1
+        let g:nord_italic = 1
         let g:nord_italic_comments = 1
+        let g:nord_cursor_line_number_background = 1
+        
         colorscheme nord
     endif
     syntax on
