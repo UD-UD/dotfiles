@@ -438,7 +438,7 @@ call plug#begin('~/.config/nvim/plugged')
          function! StartUp()
             if 0 == argc()
                 NERDTreeToggle
-            end
+            endif
          endfunction
 
         autocmd VimEnter * call StartUp()

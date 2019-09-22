@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo -e "\\n\\nInstalling VIM dependency"
+echo -e "\\n\\nInstalling NEOVIM dependency"
 echo "=============================="
 
 # vim-plug is installed as a package manager
@@ -14,4 +14,5 @@ ln -s ~/dotfiles/configs/nvim ~/.config/nvim
 ln -s ~/dotfiles/configs/nvim/init.vim ~/.vimrc
 ln -s ~/dotfiles/configs/nvim ~/.config/.vim
 
-echo -e "\\nZSH Shell setup complete"
+echo -e "\\n NEO setup complete"
+echo -e "\\nInstall NeoVim Plugins by runnnig [ nvim +PlugInstall ]"
