@@ -5,7 +5,7 @@ if test ! "$( command -v brew )"; then
     ruby -e "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install )"
 fi
 
-echo -e "\\n\\nInstalling homebrew packages..."
+echo -e "\\n\\nInstalling homebrew packages"
 echo "=============================="
 
 formulas=(

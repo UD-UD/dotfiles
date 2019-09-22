@@ -104,7 +104,7 @@ source install/brew.sh
 # ln -s ~/dotfiles/configs/nvim ~/.config/.vim
 # ln -sf $HOME/.zsh/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
 
-echo "Dot files installed successfully."
+echo "\\n\\nDot files installed successfully."
 echo "Please restart your terminal"
 
 
