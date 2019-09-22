@@ -9,7 +9,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 pip3 install neovim
 pip3 install pynvim
 
-echo -e "Linking vim configs"
+echo "Linking vim configs"
 ln -s ~/dotfiles/configs/nvim/init.vim ~/.config/nvim/init.vim
 ln -s ~/dotfiles/configs/nvim ~/.config/nvim
 ln -s ~/dotfiles/configs/nvim/init.vim ~/.vimrc

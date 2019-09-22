@@ -94,7 +94,9 @@ source install/brew.sh
 
 # Install ZSH SHELL
 source install/zsh.sh
-# source install/vim.sh
+
+# vim config
+source install/vim.sh
 
 
 
