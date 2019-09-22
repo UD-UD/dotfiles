@@ -79,6 +79,7 @@ mkdir -p ~/.config ~/.config/nvim
 config_files=$( find "$PWD/dotfiles/configs" -d 1 2>/dev/null )
 for config in $config_files; do
     target="$HOME/.config/$( basename "$config" )"
+    echo "~${target#$HOME}"
     if [ -e "$target" ]; then
         echo "~${target#$HOME} already exists... Skipping."
     else
