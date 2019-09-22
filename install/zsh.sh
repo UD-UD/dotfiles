@@ -53,4 +53,4 @@ esac
 ln -s ~/dotfiles/configs/zshrc ~/.zshrc
 ln -sf $HOME/.zsh/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
 
-echo -e "\\n ZSH Shell setup complete"
+echo -e "\\nZSH Shell setup complete"
