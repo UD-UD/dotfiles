@@ -32,6 +32,7 @@ prompt pure
 # Set Default editor to nvim
 export EDITOR='nvim'
 
+alias e="nvim"
 alias c="clear"
 alias cdm="cd /Users/ud/Office/chartsdotcom"
-alias zrc="code ~/.zshrc"
+alias zrc="e ~/.zshrc"
