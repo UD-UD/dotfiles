@@ -9,6 +9,7 @@ echo -e "\\n\\nInstalling homebrew packages"
 echo "=============================="
 
 formulas=(
+    git
     zsh
     neovim
     python3
