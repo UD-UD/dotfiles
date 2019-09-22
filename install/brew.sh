@@ -25,7 +25,7 @@ cask_formulas=(
 
 for formula in "${formulas[@]}"; do
     formula_name=$( echo "$formula" | awk '{print $1}' )
-    if brew list "$formula_name" > /dev/null 2>&1; then
+    if brew cask list "$formula_name" > /dev/null 2>&1; then
         echo "$formula_name already installed... skipping."
     else
         brew install "$formula"
