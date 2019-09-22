@@ -16,7 +16,11 @@ formulas=(
     node
     ag
     reattach-to-user-namespace
+)
+
+cask_formulas = (
     java
+    caskroom/fonts/font-lekton-nerd-font
 )
 
 for formula in "${formulas[@]}"; do
@@ -29,10 +33,17 @@ for formula in "${formulas[@]}"; do
 done
 
 brew tap caskroom/cask
-
-echo -e "\\n\\nInstalling Lekton font"
-echo "=============================="
-# Fonts
 brew tap caskroom/fonts
-brew cask install caskroom/fonts/font-lekton-nerd-font
+
+for formula in "${cask_formulas[@]}"; do
+    formula_name=$( echo "$formula" | awk '{print $1}' )
+    if brew list "$formula_name" > /dev/null 2>&1; then
+        echo "$formula_name already installed... skipping."
+    else
+        brew cask install "$formula"
+    fi
+done
+
+
+
 
