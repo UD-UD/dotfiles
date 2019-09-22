@@ -1,0 +1,2 @@
+CHSH=no
+RUNZSH=no 
