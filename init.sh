@@ -89,8 +89,11 @@ for config in $config_files; do
     fi
 done
 
+# Install necessary brew packages
 source install/brew.sh
-# source install/zsh.sh
+
+# Install ZSH SHELL
+source install/zsh.sh
 # source install/vim.sh
 
 
