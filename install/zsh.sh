@@ -19,7 +19,9 @@ echo -e "\\n -> oh-my-zsh"
 
 if [ ! -d $HOME/.oh-my-zsh ] 
 then
-    sh -c --skip-chsh "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" || true
+    CHSH=no
+    RUNZSH=no
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
 echo -e "\\n -> Pure Prompt"
