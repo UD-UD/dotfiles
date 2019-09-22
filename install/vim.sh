@@ -14,5 +14,5 @@ ln -s $PWD/configs/nvim ~/.config/nvim
 ln -s $PWD/configs/nvim/init.vim ~/.vimrc
 ln -s $PWD/configs/nvim ~/.config/.vim
 
-echo -e "\\n NEO setup complete"
+echo -e "\\n NEOVIM setup complete"
 echo -e "\\nInstall NeoVim Plugins by runnnig [ nvim +PlugInstall ]"

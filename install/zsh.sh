@@ -56,7 +56,7 @@ case "$SHELL" in
     ;;
 esac
 
-ln -s $PWD/configs/zshrc ~/.zshrc
+ln -sf $PWD/configs/zshrc ~/.zshrc
 ln -sf $HOME/.zsh/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
 
 echo -e "\\nZSH Shell setup complete"
