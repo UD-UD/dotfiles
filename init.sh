@@ -89,7 +89,7 @@ for config in $config_files; do
     fi
 done
 
-# source install/brew.sh
+source install/brew.sh
 # source install/zsh.sh
 # source install/vim.sh
 
