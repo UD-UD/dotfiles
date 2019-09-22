@@ -15,12 +15,14 @@ update_shell() {
 echo -e "\\n\\nConfiguring ZSH Shell"
 echo "=============================="
 
-echo -e "\\ -> oh-my-zsh"
+echo -e "\\n -> oh-my-zsh"
 
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+if [ ! -d $HOME/.oh-my-zsh ] 
+then
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
 
-
-echo -e "\\ -> Pure Prompt"
+echo -e "\\n -> Pure Prompt"
 
 # Modifying prompt
 if [ ! -d $HOME/.zsh/pure ] 
@@ -29,13 +31,13 @@ then
     git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 fi
 
-echo -e "\\ -> Syntax Highlighter"
+echo -e "\\n -> Syntax Highlighter"
 if [ ! -d $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ] 
 then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 fi
 
-echo -e "\\ -> Defaulting to ZSH Shell"
+echo -e "\\n -> Defaulting to ZSH Shell"
 # Setting ZSH as Default Shell
 case "$SHELL" in
   */zsh)
