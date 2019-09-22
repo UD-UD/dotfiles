@@ -14,7 +14,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-. /usr/local/etc/profile.d/z.sh
+# . /usr/local/etc/profile.d/z.sh
 
 fpath+=("$HOME/.zsh/pure")
 
