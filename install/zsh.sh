@@ -38,7 +38,7 @@ then
 fi
 
 echo -e "\\n -> Z"
-if [ ! -d $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ] 
+if [ ! -d $HOME/.oh-my-zsh/custom/plugins/zsh-z ] 
 then
     git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 fi
