@@ -37,6 +37,12 @@ then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 fi
 
+echo -e "\\n -> Z"
+if [ ! -d $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ] 
+then
+    git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
+fi
+
 echo -e "\\n -> Defaulting to ZSH Shell"
 # Setting ZSH as Default Shell
 case "$SHELL" in
