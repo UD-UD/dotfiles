@@ -20,6 +20,7 @@ formulas=(
 
 cask_formulas=(
     java
+    iterm2
     caskroom/fonts/font-lekton-nerd-font
 )
 
