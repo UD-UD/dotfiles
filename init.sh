@@ -54,6 +54,12 @@ then
     git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 fi
 
+# Install tmux plugin
+if [ ! -d $HOME/.tmux/tpm ] 
+then
+    mkdir -p "$HOME/.tmux/tpm"
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
 
 # Install Syntax HighLighter
 if [ ! -d $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ] 
