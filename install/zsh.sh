@@ -19,7 +19,7 @@ echo -e "\\n -> oh-my-zsh"
 
 if [ ! -d $HOME/.oh-my-zsh ] 
 then
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" || true
 fi
 
 echo -e "\\n -> Pure Prompt"
@@ -29,6 +29,12 @@ if [ ! -d $HOME/.zsh/pure ]
 then
     mkdir -p "$HOME/.zsh"
     git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+fi
+
+echo -e "\\n -> Auto Suggestion"
+if [ ! -d $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions ] 
+then
+   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 fi
 
 echo -e "\\n -> Syntax Highlighter"
