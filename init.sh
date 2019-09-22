@@ -108,7 +108,7 @@ source install/vim.sh
 # ln -s ~/dotfiles/configs/nvim/init.vim ~/.vimrc
 # ln -s ~/dotfiles/configs/nvim ~/.config/.vim
 # ln -sf $HOME/.zsh/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
-
+echo -e "\\nInstall NeoVim Plugins by runnnig nvim +PlugInstall"
 echo -e "\\n\\nDot files installed successfully."
 echo "Please restart your terminal"
 
