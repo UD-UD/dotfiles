@@ -77,6 +77,7 @@ mkdir -p ~/.config ~/.config/nvim
 
 # copy necessary files
 config_files=$( find "$PWD/dotfiles/configs" -d 1 2>/dev/null )
+echo $config_files
 for config in $config_files; do
     target="$HOME/.config/$( basename "$config" )"
     echo "~${target#$HOME}"
