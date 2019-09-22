@@ -18,7 +18,7 @@ formulas=(
     reattach-to-user-namespace
 )
 
-cask_formulas = (
+cask_formulas=(
     java
     caskroom/fonts/font-lekton-nerd-font
 )
