@@ -9,7 +9,7 @@
 
 # # TODO Move to .dotfiles_bkp
 mkdir -p ~/.dotfiles_bkp
-mv -f ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~./config  ~/.dotfiles_bkp
+cp -f ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~./config  ~/.dotfiles_bkp
 
 # remove existing dotfiles
 rm -rf ~/.zsh ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config/nvim 2> /dev/null
@@ -23,7 +23,6 @@ config_files=$( find "$PWD/dotfiles/configs" -d 1 2>/dev/null )
 echo $config_files
 for config in $config_files; do
     target="$HOME/.config/$( basename "$config" )"
-    echo "~${target#$HOME}"
     if [ -e "$target" ]; then
         echo "~${target#$HOME} already exists... Skipping."
     else
