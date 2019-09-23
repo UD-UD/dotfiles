@@ -34,5 +34,5 @@ export EDITOR='nvim'
 
 alias e="nvim"
 alias c="clear"
-alias cdm="cd /Users/ud/Office/chartsdotcom"
+# alias cdm="cd /Users/ud/Office/chartsdotcom"
 alias zrc="e ~/.zshrc"
