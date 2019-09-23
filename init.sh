@@ -7,69 +7,12 @@
 # Ag is a code-searching tool similar to Ack but faster.
 # Reattach-to-user-namespace is a MacOS Sierra fix to ensure the workflow has access to the clipboard so share copy and paste functionality as one would expect in the correct namespace.
 
-# update_shell() {
-#   local shell_path;
-#   shell_path="$(command -v zsh)"
-
-#   echo "Changing your shell to zsh ..."
-#   if ! grep "$shell_path" /etc/shells > /dev/null 2>&1 ; then
-#     echo "Adding '$shell_path' to /etc/shells"
-#     sudo sh -c "echo $shell_path >> /etc/shells"
-#   fi
-#   sudo chsh -s "$shell_path" "$USER"
-# }
-
-# # ***************************
-
-# brew install zsh neovim python3 node ag reattach-to-user-namespace
-# brew tap caskroom/cask
-
-# # vim-plug is installed as a package manager
-# curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-#     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-# pip3 install neovim
-# pip3 install pynvim
-
 # # TODO Move to .dotfiles_bkp
-# mkdir -p ~/.dotfiles_bkp
-# mv -f ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~./config  ~/.dotfiles_bkp
+mkdir -p ~/.dotfiles_bkp
+mv -f ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~./config  ~/.dotfiles_bkp
 
 # remove existing dotfiles
-rm -rf ~/.zsh ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config 2> /dev/null
-
-
-# Install oh my zsh
-# sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# # Install Pure Prompt
-# if [ ! -d $HOME/.zsh/pure ] 
-# then
-#     mkdir -p "$HOME/.zsh"
-#     git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
-# fi
-
-
-# # Install Syntax HighLighter
-# if [ ! -d $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ] 
-# then
-#     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-# fi
-
-# # Fonts
-# brew tap caskroom/fonts
-# brew cask install caskroom/fonts/font-lekton-nerd-font
-
-# # Setting ZSH as Default Shell
-# case "$SHELL" in
-#   */zsh)
-#     if [ "$(command -v zsh)" != '/usr/local/bin/zsh' ] ; then
-#       update_shell
-#     fi
-#     ;;
-#   *)
-#     update_shell
-#     ;;
-# esac
+rm -rf ~/.zsh ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config/nvim 2> /dev/null
 
 # Make necessary files
 
