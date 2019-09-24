@@ -36,5 +36,12 @@ export EDITOR='nvim'
 
 alias e="nvim"
 alias c="clear"
-# alias cdm="cd /Users/ud/Office/chartsdotcom"
+alias cdm="cd /Users/ud/Office/chartsdotcom"
 alias zrc="e ~/.zshrc"
+
+# functions 
+
+cl(){
+    git clone $1 && cd $( basename $1 ".git") && e .
+}
+
